@@ -16,3 +16,17 @@ Using bulk RNA sequencing (RNA-Seq) data to create a database and interrogate it
 - $ ./blastn -query ../Queries_Nb /test.txt -db ../db_benthamiana/ Nbv5_transcriptome.fa -out ../results_benthamiana/test01.bls -task blastn
 - $ ./blastn -query ../Queries_Pp /test.txt -db ../db_benthamiana/ Nbv5_transcriptome.fa -out ../results_benthamiana/test01.bls -task blastn
 
+## Workflow
+1. Clone this repository
+2. Unzip file Nbv5_transcriptome.zip
+3. Script to execute:
+  1. makeblastdb –in Nbv5_transcriptome.fa –parse_seqids –dbtype nucl 
+  2. blastn -query Queries_Nb /test.txt -db db_benthamiana Nbv5_transcriptome.fa -out results_benthamiana/test01.bls -task blastn
+
+### Structure
+
+- SnakeMake workflow:
+  - Step 1 and 2
+  - Step 3.1 and 3.2 -> On Container (running makeblastdb and blastn).
+
+
