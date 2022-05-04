@@ -1,0 +1,11 @@
+name: rnaseq
+  
+channels:
+- conda-forge
+- bioconda
+- defaults
+
+dependencies:
+- snakemake-minimal=7.6
+- blast=2.12
+- pygraphviz=2.50
