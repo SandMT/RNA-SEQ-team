@@ -60,10 +60,6 @@ blastn -query Queries_Nb/Test.txt -db db_benthamiana/Nbv5_transcriptome.fa -out 
 sed -n -e 22p results/test01.bls > results/highest_score.txt
 ```
 
-### blastn --> To execute a "blast" --> interrogates previouslu created DB with our queries (one or more query sequences)
-- $ ./blastn -query ../Queries_Nb /test.txt -db ../db_benthamiana/ Nbv5_transcriptome.fa -out ../results_benthamiana/test01.bls -task blastn
-- $ ./blastn -query ../Queries_Pp /test.txt -db ../db_benthamiana/ Nbv5_transcriptome.fa -out ../results_benthamiana/test01.bls -task blastn
-
 ## Workflow
 1. Clone this repository
 2. Unzip file Nbv5_transcriptome.zip
