@@ -30,32 +30,27 @@ Using bulk RNA sequencing (RNA-Seq) data to create a database and interrogate it
 ```
 unzip Nbv5_transcriptome.zip
 ```
-
 ### mkdir --> make a new directory (where new DB is store)
 ```
 mkdir db_benthamiana
 ```
-
 ### mv --> move the unzipped fasta file to the new created directory
 ```
 mv Nbv5_transcriptome.fa db_benthamiana
 ```
-
 ### cd --> change to new folder
 ```
 cd db_benthamiana/
 ```
-
 ### makeblastdb  --> create DB from unzipped falta file
 ```
 makeblastdb -in Nbv5_transcriptome.fa -parse_seqids -dbtype nucl
 ```
-
 ### blast --> make blast
 ```
 blastn -query Queries_Nb/Test.txt -db db_benthamiana/Nbv5_transcriptome.fa -out results/Results01.bls -task blastn 
 ```
-### sed --> extract higher score local alignment 
+### sed --> extract highest score local alignment 
 ```
 sed -n -e 22p results/test01.bls > results/highest_score.txt
 ```
