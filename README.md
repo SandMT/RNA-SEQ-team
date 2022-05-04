@@ -27,7 +27,35 @@ Using bulk RNA sequencing (RNA-Seq) data to create a database and interrogate it
 ## Commands to execute tasks
 
 ### unzip --> Unzip fasta zipped file
-- $ unzip Nbv5_transcriptome.zip
+```
+unzip Nbv5_transcriptome.zip
+```
+
+### mkdir --> make a new directory (where new DB is store)
+```
+mkdir db_benthamiana
+```
+
+### mv --> move the unzipped fasta file to the new created directory
+```
+mv Nbv5_transcriptome.fa db_benthamiana
+```
+
+### cd --> change to new folder
+```
+cd db_benthamiana/
+```
+
+### makeblastdb  --> create DB from unzipped falta file
+```
+makeblastdb -in Nbv5_transcriptome.fa -parse_seqids -dbtype nucl
+```
+
+### blast --> make blast
+```
+blastn -query Queries_Nb/Test.txt -db db_benthamiana/Nbv5_transcriptome.fa -out results/Results01.bls -task blastn (results fue sustituiod de test01)
+```
+
 ### makeblastdb --> To create a Data Base --> from FASTA file containing RNASEQ data (massive sequencing data)
 - $ ./makeblastdb –in ../db_benthamiana/Nbv5_transcriptome.fa –parse_seqids –dbtype nucl
 
