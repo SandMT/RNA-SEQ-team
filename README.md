@@ -59,12 +59,17 @@ sed -n -e 22p results/test01.bls > results/highest_score.txt
 1. Clone this repository
 2. Unzip file Nbv5_transcriptome.zip
 3. Script to execute:
-  1. makeblastdb –in Nbv5_transcriptome.fa –parse_seqids –dbtype nucl 
-  2. blastn -query Queries_Nb /test.txt -db db_benthamiana Nbv5_transcriptome.fa -out results_benthamiana/test01.bls -task blastn
+  1. unzip Nbv5_transcriptome.zip 
+  2. mkdir db_benthamiana
+  3. mv Nbv5_transcriptome.fa db_benthamiana
+  4. cd db_benthamiana/
+  5. makeblastdb -in Nbv5_transcriptome.fa -parse_seqids -dbtype nucl
+  6. blastn -query Queries_Nb/Test.txt -db db_benthamiana/Nbv5_transcriptome.fa -out results/Results01.bls -task blastn
+  7. sed -n -e 22p results/test01.bls > results/highest_score.txt
 
 ### Structure
 
-- SnakeMake workflow:
+- SnakeMake workflow (hanging !):
   - Step 1 and 2
   - Step 3.1 and 3.2 -> On Container (running makeblastdb and blastn).
 
