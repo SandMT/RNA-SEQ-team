@@ -21,7 +21,7 @@ Using bulk RNA sequencing (RNA-Seq) data to create a database and interrogate it
 - Each file txt contains a nucleotide sequence of the eIF4E factor (DB retrived and/or experimentaly obtained [S. Martínez-Turiño and J.A. García, unpublished results].
 
 ## Tools:
-- blast
+- blast 2.12
 ## Commands to execute tasks
 ### makeblastdb --> To create a Data Base --> from FASTA file containing RNASEQ data (massive sequencing data)
 - $ ./makeblastdb –in ../db_benthamiana/Nbv5_transcriptome.fa –parse_seqids –dbtype nucl
