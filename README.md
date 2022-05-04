@@ -22,7 +22,7 @@ Using bulk RNA sequencing (RNA-Seq) data to create a database and interrogate it
 
 ## Tools:
 - Blast 2.12
-- SnakeMake
+- SnakeMake-minimal 
 
 ## Commands to execute tasks
 
