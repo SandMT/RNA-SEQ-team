@@ -46,7 +46,7 @@ cd db_benthamiana/
 ```
 makeblastdb -in Nbv5_transcriptome.fa -parse_seqids -dbtype nucl
 ```
-### blast --> Make blast (local alignment)
+### blastn --> Make blast (local alignment)
 ```
 blastn -query Queries_Nb/Test.txt -db db_benthamiana/Nbv5_transcriptome.fa -out results/Results01.bls -task blastn 
 ```
