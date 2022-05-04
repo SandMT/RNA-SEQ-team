@@ -53,11 +53,12 @@ makeblastdb -in Nbv5_transcriptome.fa -parse_seqids -dbtype nucl
 
 ### blast --> make blast
 ```
-blastn -query Queries_Nb/Test.txt -db db_benthamiana/Nbv5_transcriptome.fa -out results/Results01.bls -task blastn (results fue sustituiod de test01)
+blastn -query Queries_Nb/Test.txt -db db_benthamiana/Nbv5_transcriptome.fa -out results/Results01.bls -task blastn 
 ```
-
-### makeblastdb --> To create a Data Base --> from FASTA file containing RNASEQ data (massive sequencing data)
-- $ ./makeblastdb –in ../db_benthamiana/Nbv5_transcriptome.fa –parse_seqids –dbtype nucl
+### sed --> extract higher score local alignment 
+```
+sed -n -e 22p results/test01.bls > results/highest_score.txt
+```
 
 ### blastn --> To execute a "blast" --> interrogates previouslu created DB with our queries (one or more query sequences)
 - $ ./blastn -query ../Queries_Nb /test.txt -db ../db_benthamiana/ Nbv5_transcriptome.fa -out ../results_benthamiana/test01.bls -task blastn
