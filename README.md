@@ -10,6 +10,7 @@ Using bulk RNA sequencing (RNA-Seq) data to create a database and interrogate it
 *FASTA file (zipped)*
 - Description: cDNA contigs created by de novo assembly of RNA-Seq (massive-scale cDNA sequencing data) reads.
 - Origin: Transcriptome from *Nicotiana benthamiana* plants (Transcriptome assembly v5, primary transcripts [Nakasugi *et al*. 2014]) using Bowtie2 (Langmead & Salzberg, 2012) with the very sensitive option activated, as described by Pasin *et al*. 2020 (doi: 10.1016/j.xplc.2020.100099) (see Supplemental Methods in [(https://pubmed.ncbi.nlm.nih.gov/32984814/)]. 
+
 *Query folders ("Queries_Nb" and "Queries_Pp")*
 - Folder "Queries_Nb" contains 20 txt files 
 - Folder "Queries_P" contains 6 txt files
